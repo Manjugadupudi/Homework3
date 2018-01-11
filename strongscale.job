@@ -1,0 +1,49 @@
+#!/bin/bash
+#----------------------------------------------------
+#SBATCH -J myjob # Job name
+#SBATCH -o myjob.o%j # Name of stdout output file
+#SBATCH -e myjob.e%j # Name of stderr error file
+#SBATCH -p development # Queue (partition) name
+#SBATCH -N 1 # Total # of nodes (still use 1 node)
+#SBATCH -n 16 # Total # ask for 16 cores on a node
+#SBATCH -t 00:30:00 # Run time (hh:mm:ss)
+#SBATCH --mail-user=mgadupudi@umassd.edu
+#SBATCH --mail-type=all
+# Send email at begin and end of job
+echo "Run 1..."
+export OMP_NUM_THREADS=1
+echo $OMP_NUM_THREADS
+
+./openmp 1000000
+echo "Run 2..."
+export OMP_NUM_THREADS=2
+echo $OMP_NUM_THREADS
+
+./openmp 1000000
+echo "Run 3..."
+export OMP_NUM_THREADS=4
+echo $OMP_NUM_THREADS
+
+./openmp 1000000
+echo "Run 4..."
+export OMP_NUM_THREADS=8
+echo $OMP_NUM_THREADS
+
+./openmp 1000000
+echo "Run 5..."
+export OMP_NUM_THREADS=16
+echo $OMP_NUM_THREADS
+
+./openmp 1000000
+echo "Run 6..."
+export OMP_NUM_THREADS=32
+echo $OMP_NUM_THREADS
+
+./openmp 1000000
+echo "Run 7..."
+export OMP_NUM_THREADS=64
+echo $OMP_NUM_THREADS
+
+./openmp 1000000
+
+wait

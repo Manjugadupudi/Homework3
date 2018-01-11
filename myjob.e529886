@@ -1,0 +1,7 @@
+/tmp/slurmd/job529886/slurm_script: line 17: 69742 Segmentation fault      ./openmp 1000000
+/tmp/slurmd/job529886/slurm_script: line 22: 69743 Segmentation fault      ./openmp 1000000
+/tmp/slurmd/job529886/slurm_script: line 27: 69745 Segmentation fault      ./openmp 1000000
+/tmp/slurmd/job529886/slurm_script: line 32: 69749 Segmentation fault      ./openmp 1000000
+/tmp/slurmd/job529886/slurm_script: line 37: 69757 Segmentation fault      ./openmp 1000000
+/tmp/slurmd/job529886/slurm_script: line 42: 69773 Segmentation fault      ./openmp 1000000
+/tmp/slurmd/job529886/slurm_script: line 47: 69805 Segmentation fault      ./openmp 1000000
